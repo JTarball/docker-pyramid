@@ -17,7 +17,6 @@ machine:
 dependencies:
     pre:
         - pip install docker-compose
-        - pip install cookiecutter
         - pip install sphinx
 
 # test:
