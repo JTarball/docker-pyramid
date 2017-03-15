@@ -36,4 +36,4 @@ deployment:
   production:
     branch: master
     commands:
-      - ./deploy_docs.sh docs/build
+      - cd docker-pyramid && ./deploy_docs.sh docs/build/html
