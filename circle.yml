@@ -18,7 +18,7 @@ dependencies:
     pre:
         - pip install docker-compose
         - pip install sphinx
-        - pip install -r config/test.txt
+        - pip install -r config/requirements/test.txt
 
 test:
     override:
