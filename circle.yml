@@ -36,4 +36,4 @@ deployment:
   production:
     branch: master
     commands:
-      - ./deploy_docs.sh docs/build/html
+      - ./deploy_docs.sh docs/build
