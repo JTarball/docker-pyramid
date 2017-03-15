@@ -33,7 +33,7 @@ Django Test Requirements
 
 - pytest-xdist
 
-- pytest-cov
+- pytest-coverage
 
 - nose-progressive
 
