@@ -22,7 +22,7 @@ then
 fi
 
 # make a directory to put the gh-pages branch
-mkdir _build
+mkdir -p _build
 cd _build
 # now lets setup a new repo so we can update the gh-pages branch
 git config --global user.email "james.tarball@gmail.com" > /dev/null 2>&1
@@ -42,7 +42,7 @@ else
 fi
 
 # If not built - build the docs
-if [ ! -d ../docs ];
+if [ ! -d ../docs/build/html ];
 then
     make html
 fi
