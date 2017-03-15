@@ -36,13 +36,16 @@ then
     git checkout gh-pages
     # delete any old site as we are going to replace it
     # Note: this explodes if there aren't any, so moving it here for now
-    git rm -rf .
+    if [ "$(ls)" ];
+    then
+        git rm -rf .
+    fi
 else
     git checkout --orphan gh-pages
 fi
 
 # If not built - build the docs
-if [ ! -d ../docs/build/html ];
+if [ ! -d ../docs/build ];
 then
     make html
 fi
