@@ -1,0 +1,63 @@
+# Docker Compose YML Config
+
+# This is the Development Local Config (Docker Compose v1.6.0 up)
+
+
+version: '2'
+services:
+    app:
+      extends:
+        file: config/docker-compose-common.yml
+        service: app
+      build: 
+        context: ./
+        args:
+          - ENV_TYPE=dev
+      tty:
+        true
+      volumes:
+        - ./app:/app
+        #- ../../django-blog:/app/src/django_blog
+      # links:
+      #   - postgres:postgres
+      #   - redis:redis
+      #   - rabbitmq:rabbitmq
+      # depends_on:
+      #   - postgres
+      #   - redis
+      #   - rabbitmq
+      # env_file:
+      #   - ./config/env-local
+
+    # redis:
+    #   extends:
+    #     file: config/docker-compose-common.yml
+    #     service: redis
+    #   env_file:
+    #     - ./config/env-local
+
+    # postgres:
+    #   extends:
+    #     file: config/docker-compose-common.yml
+    #     service: postgres
+    #   env_file:
+    #     - ./config/env-local
+
+    # rabbitmq:
+    #   extends:
+    #     file: config/docker-compose-common.yml
+    #     service: rabbitmq
+    #   env_file:
+    #     - ./config/env-local
+
+    # nginx:
+    #   extends:
+    #     file: config/docker-compose-common.yml
+    #     service: nginx
+    #   links:
+    #     - app:app
+    #   volumes_from:
+    #     - app
+    #   env_file:
+    #     - ./config/env-local
+

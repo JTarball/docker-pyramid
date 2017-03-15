@@ -1,0 +1,3 @@
+[run]
+source = docker_pyramid
+omit = docker_pyramid/test*
