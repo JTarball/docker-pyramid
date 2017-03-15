@@ -6,6 +6,7 @@ __pycache__/
 *.egg-info/
 .installed.cfg
 *.egg
+build/
 dist/
 .coverage
 cover/
@@ -13,4 +14,5 @@ pylint.out
 app.log*
 
 # Ignore built doc folders
+docs/build/
 circle-junit/

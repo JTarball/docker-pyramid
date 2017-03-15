@@ -1,1 +1,9 @@
 -r base.txt
+
+
+# docs supports
+# ====================
+sphinx
+recommonmark
+sphinx-git
+sphinx_rtd_theme
