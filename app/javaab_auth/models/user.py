@@ -31,6 +31,7 @@ USER_ROLES = ('unassigned', 'agent', 'customer')
 #       They are extremely useful so I have
 #       replicated the behaviour
 class AbstractUserManager(object):
+
     @staticmethod
     def get_something(param):
         return User.query.filter(User.somefield == param).all()
