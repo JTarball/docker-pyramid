@@ -1,5 +1,5 @@
 NAME=app
-PACKAGE_NAME=docker_pyramid
+PACKAGE_NAME=javaab_auth
 
 # #Calls to docker-env
 DEPS=
@@ -18,8 +18,11 @@ run:
 	make cmd
 
 check:
-	make cmd run="py.test"
-	
+	make cmd run="py.test --cov --cov-report=term-missing"
+
+pshell:
+	make cmd run="pshell development.ini"
+
 sniffer:
 	make cmd_no_deps run=sniffer
 

@@ -6,7 +6,7 @@ Getting Started
 
 - Change directory into your newly created project.
 
-    cd docker_pyramid
+    cd javaab_auth
 
 - Create a Python virtual environment.
 

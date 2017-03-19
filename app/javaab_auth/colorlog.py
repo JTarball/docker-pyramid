@@ -6,7 +6,7 @@ import logging
 import collections
 import sys
 
-from docker_pyramid.escape_codes import escape_codes, parse_colors
+from javaab_auth.escape_codes import escape_codes, parse_colors
 
 __all__ = ('escape_codes', 'default_log_colors', 'ColoredFormatter',
            'LevelFormatter')

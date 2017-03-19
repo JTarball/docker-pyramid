@@ -21,6 +21,10 @@ if [ "$1" = 'app' ]; then
 	#sudo pip install -e .
 	#tail -f CHANGES.txt
 	#sudo pip install -e ".[testing]"
+
+
+	#python setup develop
+	initialize_scaffold_db development.ini
 	pserve $APP_DIR/development.ini --reload
 
 

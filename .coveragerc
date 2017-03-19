@@ -1,0 +1,14 @@
+[run]
+omit =
+    tests/*
+    /home/ubuntu/virtualenvs/venv-system/lib/python2.7/site-packages/_pytest/*
+    /home/ubuntu/virtualenvs/venv-system/lib/python2.7/distutils/*
+    /home/ubuntu/virtualenvs/venv-system/lib/python2.7/site-packages/py/*
+    /home/ubuntu/virtualenvs/venv-system/lib/python2.7/site-packages/pytest_cov/*
+
+[report]
+exclude_lines =
+    pragma: no cover
+    def __repr__
+    raise NotImplementedError
+    if __name__ == .__main__.:

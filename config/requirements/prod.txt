@@ -1,1 +1,2 @@
 -r base.txt
+git+https://github.com/javaab/libutils.git#egg=libutils

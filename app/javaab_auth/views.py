@@ -6,6 +6,8 @@ from pyramid.response import Response
 import logging
 log = logging.getLogger(__name__)
 
+from libutils.log_formatters import ColoredFormatter, LevelFormatter
+
 
 @view_config(route_name='home', renderer='templates/mytemplate.jinja2')
 def my_view(request):

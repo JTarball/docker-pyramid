@@ -9,8 +9,16 @@ with open(os.path.join(here, 'CHANGES.txt')) as f:
     CHANGES = f.read()
 
 requires = [
+    'bcrypt',
     'pyramid',
     'pyramid_jinja2',
+    'pyramid_tm',
+    'sqlalchemy',
+    'transaction',
+    'zope.sqlalchemy',
+    'cornice',
+    'cornice_swagger',
+    'colander',
     'pyramid_debugtoolbar',
     'waitress',
 ]
@@ -22,9 +30,9 @@ tests_require = [
 ]
 
 setup(
-    name='docker_pyramid',
+    name='javaab_auth',
     version='0.0',
-    description='Docker Pyramid',
+    description='Javaab Authentication and Accounts Service',
     long_description=README + '\n\n' + CHANGES,
     classifiers=[
         'Programming Language :: Python',
@@ -45,7 +53,10 @@ setup(
     install_requires=requires,
     entry_points={
         'paste.app_factory': [
-            'main = docker_pyramid:main',
+            'main = javaab_auth:main',
+        ],
+        'console_scripts': [
+            'initialize_scaffold_db = javaab_auth.scripts.initialise_db:main',
         ],
     },
 )

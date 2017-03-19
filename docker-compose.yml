@@ -17,17 +17,17 @@ services:
         true
       volumes:
         - ./app:/app
-        #- ../../django-blog:/app/src/django_blog
-      # links:
-      #   - postgres:postgres
+        - ../../libutils:/usr/local/src/libutils
+      links:
+        - postgres:postgres
       #   - redis:redis
       #   - rabbitmq:rabbitmq
-      # depends_on:
-      #   - postgres
+      depends_on:
+        - postgres
       #   - redis
       #   - rabbitmq
-      # env_file:
-      #   - ./config/env-local
+      env_file:
+         - ./config/env-local
 
     # redis:
     #   extends:
@@ -36,12 +36,12 @@ services:
     #   env_file:
     #     - ./config/env-local
 
-    # postgres:
-    #   extends:
-    #     file: config/docker-compose-common.yml
-    #     service: postgres
-    #   env_file:
-    #     - ./config/env-local
+    postgres:
+      extends:
+        file: config/docker-compose-common.yml
+        service: postgres
+      env_file:
+        - ./config/env-local
 
     # rabbitmq:
     #   extends:

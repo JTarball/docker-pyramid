@@ -1,0 +1,3 @@
+[run]
+source = javaab_auth
+omit = javaab_auth/test*

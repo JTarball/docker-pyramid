@@ -41,7 +41,7 @@ class ViewTests(unittest.TestCase):
 
 class FunctionalTests(unittest.TestCase):
     def setUp(self):
-        from docker_pyramid import main
+        from javaab_auth import main
         app = main({})
         from webtest import TestApp
         self.testapp = TestApp(app)
